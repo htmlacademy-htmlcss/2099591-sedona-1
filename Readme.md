@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Ксения](https://up.htmlacademy.ru/htmlcss-individual/1/user/2099591).
-* Наставник: `Неизвестно`.
+* Наставник: `Анастасия Гущина (https://htmlacademy.ru/profile/vanastasiya)`.
 
 ---
 
