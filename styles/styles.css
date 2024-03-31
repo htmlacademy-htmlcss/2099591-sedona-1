@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/ptsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,10 +10,109 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("fonts/ptsans-700.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
 body {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  background-color: #f2f2f2;
+  color: #333333;
+}
+
+.main-header {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.navigation-list {
+  list-style: none;
+}
+
+.navigation-link {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.advantages-list,
+.features-list {
+  list-style: none;
+}
+
+.advantages-text-title,
+.features-text-title,
+.find-hotel-title,
+.footer-mailer-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages-text-description,
+.features-text-description,
+.find-hotel-description,
+.footer-mailer-description {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+}
+
+.advantages-item {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item-medium,
+.features-item {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item-dark {
+  background-color: #82b3d3;
+}
+
+.advantages-title,
+.features-title {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages-description,
+.features-description {
+  color: #333333;
+  text-align: center;
+}
+
+.advantages-item-dark .advantages-title,
+.advantages-item-dark .advantages-description {
+  color: #ffffff;
+}
+
+.features-item-light {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.footer-mailer{
+  background-color: #82b3d3;
+  color: #ffffff;
+}
+.footer-mailer-title {
+  color: #ffffff;
+}
+
+.footer-mailer-description {
+  color: #ffffff;
 }
