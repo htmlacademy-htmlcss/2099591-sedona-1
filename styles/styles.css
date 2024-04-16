@@ -14,17 +14,8 @@
   font-display: swap;
 }
 
-html {
-  height: 100%;
-}
-
 body {
-  width: 1200px;
-  min-height: 100vh;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  box-shadow: rgba(0, 0, 0, 0.2);
+  margin: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -40,6 +31,11 @@ body {
 }
 
 .container {
+  width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.2);
 }
 
@@ -94,6 +90,7 @@ body {
 
 .button-list-form {
   background-color: transparent;
+  border: 2px solid #e5e5e5;
 }
 
 .main-header {
@@ -118,6 +115,8 @@ body {
 
 .navigation-list {
   width: 400px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .navigation-link {
@@ -127,7 +126,6 @@ body {
   text-align: center;
   text-decoration: none;
   color: #000000;
-  background-color: #ffffff;
 }
 
 .navigation-user {
@@ -160,6 +158,14 @@ body {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
+}
+
+.advantages-text-title {
+  margin: 69px 0 25px;
+}
+
+.advantages-text-description {
+  margin: 25px 0 69px;
 }
 
 .advantages-list {
@@ -208,6 +214,14 @@ body {
   display: block;
 }
 
+.features-text-title {
+  margin: 64px 0 20px;
+}
+
+.features-text-description {
+  margin: 20px 0 64px;
+}
+
 .features-list {
   display: flex;
   text-align: center;
@@ -222,6 +236,18 @@ body {
 
 .features-item-light {
   background-color: rgba(131, 179, 211, 0.12);
+}
+
+.find-hotel {
+  margin: 0;
+}
+
+.find-hotel-title {
+  margin: 96px 0 20px;
+}
+
+.find-hotel-description {
+  margin: 20px 0 54px;
 }
 
 .footer-mailer{
@@ -299,6 +325,7 @@ body {
 
 .catalog-filter {
   display: flex;
+  justify-content: space-between;
 }
 
 .catalog-filter-group {
@@ -326,6 +353,11 @@ body {
   text-align: left;
 }
 
+.filter-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
 .hotel-result {
   padding: 50px 70px 60px;
   background-color: #ffffff;
@@ -344,6 +376,7 @@ body {
 }
 
 .product-list {
+  margin: 40px 0 80px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -357,6 +390,7 @@ body {
 
 .card-title-link {
   text-decoration: none;
+  color: #000000;
 }
 
 .product-card-title {
@@ -374,6 +408,11 @@ body {
   line-height: 20px;
   text-transform: uppercase;
   background-color: #f2f2f2;
+}
+
+.pagination {
+  display: flex;
+  gap: 8px;
 }
 
 .pagination-link {
