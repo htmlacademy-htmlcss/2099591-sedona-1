@@ -14,7 +14,12 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   margin: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
@@ -36,7 +41,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  box-shadow: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 .button {
@@ -52,6 +57,9 @@ body {
 }
 
 .button-find-hotel {
+  display: block;
+  width: 376px;
+  height: 52px;
   font-size: 20px;
   line-height: 36px;
 }
@@ -239,7 +247,9 @@ body {
 }
 
 .find-hotel {
+  min-height: 406px;
   margin: 0;
+  padding: 96px 304px;
 }
 
 .find-hotel-title {
@@ -280,6 +290,10 @@ body {
   justify-content: space-between;
 }
 
+.footer-contacts-social-item {
+  display: inline;
+}
+
 .footer-contacts-phone {
   font-style: normal;
   font-size: 40px;
@@ -293,6 +307,7 @@ body {
 }
 
 .main-inner {
+  flex-grow: 1;
   background-color: #ffffff;
 }
 
