@@ -116,23 +116,25 @@
           </section>
         </div>
         <section class="hotel-result">
-          <h2 class="sorting-result">Найдено гостиниц:
-            <span class="sorting-result-count">38</span>
-          </h2>
-          <select class="select-control" aria-label="Сортировка">
-            <option value="cheap">Сначала дешевые</option>
-            <option value="expensive">Сначала дорогие</option>
-            <option value="popular">Сначала популярные</option>
-          </select>
-          <a class="button button-list-form-select" href="#">
-            <span class="visually-hidden">Вывести карточки</span>
-          </a>
-          <a class="button button-list-form" href="#">
-            <span class="visually-hidden">Вывести одну карточку</span>
-          </a>
-          <a class="button button-list-form" href="#">
-            <span class="visually-hidden">Вывести список</span>
-          </a>
+          <div class="container-result">
+            <h2 class="sorting-result">Найдено гостиниц:
+              <span class="sorting-result-count">38</span>
+            </h2>
+            <select class="select-control" aria-label="Сортировка">
+              <option value="cheap">Сначала дешевые</option>
+              <option value="expensive">Сначала дорогие</option>
+              <option value="popular">Сначала популярные</option>
+            </select>
+            <a class="button button-list-form-select" href="#">
+              <span class="visually-hidden">Вывести карточки</span>
+            </a>
+            <a class="button button-list-form" href="#">
+              <span class="visually-hidden">Вывести одну карточку</span>
+            </a>
+            <a class="button button-list-form" href="#">
+              <span class="visually-hidden">Вывести список</span>
+            </a>
+          </div>
           <ul class="list product-list">
             <li class="product-card">
               <a class="product-card-link" href="#" tabindex="-1">
@@ -141,14 +143,20 @@
               <a class="card-title-link" href="#" tabindex="-1">
                 <h3 class="product-card-title">Amara Resort & Spa</h3>
               </a>
-              <span class="product-type">Гостиница</span>
-              <span class="product-price">От 4000 ₽</span>
-              <a class="button button-more" href="#">подробнее</a>
-              <button class="button button-favourites" type="button">в избранное</button>
-              <span class="hotel-four-stars">
-                <span class="visually-hidden">Четыре звезды</span>
-              </span>
-              <span class="hotel-rating">Рейтинг: 8,5</span>
+              <div class="product-card-row">
+                <span class="product-type">Гостиница</span>
+                <span class="product-price">От 4000 ₽</span>
+              </div>
+              <div class="product-card-row">
+                <a class="button button-more" href="#">подробнее</a>
+                <button class="button button-favourites" type="button">в избранное</button>
+              </div>
+              <div class="product-card-row">
+                <span class="hotel-four-stars">
+                  <span class="visually-hidden">Четыре звезды</span>
+                </span>
+                <span class="hotel-rating">Рейтинг: 8,5</span>
+              </div>
             </li>
             <li class="product-card">
               <a class="product-card-link" href="#" tabindex="-1">
@@ -213,7 +221,7 @@
               <a class="pagination-link" href="#">4</a>
             </li>
             <li class="pagination-item">
-              <span class="pagination-dots">...</span>
+              <span class="pagination-link pagination-dots">...</span>
             </li>
             <li class="pagination-item">
               <a class="pagination-link" href="#">10</a>
