@@ -35,6 +35,17 @@ body {
   box-sizing: border-box;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .container {
   width: 1200px;
   min-height: 100vh;
@@ -45,6 +56,8 @@ body {
 }
 
 .button {
+  border: none;
+  border-radius: 4px;
   font-family: inherit;
   font-size: 16px;
   font-weight: 700;
@@ -56,56 +69,103 @@ body {
   text-decoration: none;
 }
 
+.button-want-here {
+  padding: 8px 34px;
+}
+
 .button-find-hotel {
   display: block;
   width: 376px;
   height: 52px;
+  padding: 8px 50px;
+  margin: 0 auto;
   font-size: 20px;
   line-height: 36px;
 }
 
 .button-mailer {
+  padding: 8px 50px;
   font-size: 20px;
   line-height: 36px;
   background-color: #82b3d3;
+  border-radius: 0 4px 4px 0;
 }
 
 .button-social {
+  width: 47px;
+  height: 40px;
+  display: block;
+  outline: 1px solid #82b3d3;
   color: #82b3d3;
   background-color: transparent;
 }
 
 .button-apply {
+  min-width: 191px;
+  padding: 8px 50px;
+  margin-bottom: 32px;
   background-color: #82b3d3;
 }
 
 .button-opacity {
+  min-width: 191px;
+  padding: 8px 57px;
   background-color: transparent;
 }
 
 .button-favourites {
+  display: block;
+  min-width: 140px;
+  padding: 8px 20px;
+  margin: 0;
   background-color: #82b3d3;
 }
 
 .button-favourites-active {
+  display: block;
+  min-width: 140px;
+  padding: 8px 20px;
+  margin: 0;
   background-color: #7db54f;
 }
 
 .button-list-form-select {
+  min-width: 48px;
+  padding: 16px;
+  margin-left: 70px;
+  display: block;
   background-color: transparent;
   border: 2px solid #000000;
 }
 
 .button-list-form {
+  min-width: 48px;
+  padding: 16px;
+  margin-left: 8px;
+  display: block;
   background-color: transparent;
   border: 2px solid #e5e5e5;
+  gap: 8px;
 }
+
+.button-more {
+  display: block;
+  min-width: 140px;
+  padding: 8px 26px;
+  margin: 0;
+}
+
+/* MAIN-HEADER */
 
 .main-header {
   padding: 0 70px;
   display: flex;
   background-color: #ffffff;
   color: #000000;
+}
+
+.main-header-logo {
+  display: block;
 }
 
 .list {
@@ -115,30 +175,44 @@ body {
 }
 
 .navigation {
+  margin: 0;
+  padding: 0;
   width: 892px;
-  height: 64px;
-  margin: 0 auto;
+  margin-left: 30px;
   display: flex;
+  flex-grow: 1;
+  gap: 30px;
 }
 
 .navigation-list {
-  width: 400px;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
 }
 
 .navigation-link {
+  display: block;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
   text-align: center;
   text-decoration: none;
   color: #000000;
+  padding: 20px 16px;
+  min-width: 44px;
+  min-height: 64px;
 }
 
 .navigation-user {
-  width: 300px;
   margin-left: auto;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.navigation-item-button {
+  display: flex;
+  align-items: center;
 }
 
 .favourite-count {
@@ -148,6 +222,8 @@ body {
   color: #ffffff;
   background-color: #7db54f;
 }
+
+/* MAIN */
 
 .main-index {
   flex-grow: 1;
@@ -182,10 +258,16 @@ body {
   text-align: center;
 }
 
-.advantages-item {
+.advantages-content {
   width: 400px;
   min-height: 385px;
   padding: 112px 85px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.advantages-item {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -195,12 +277,13 @@ body {
 
 .advantages-item-dark {
   width: 100%;
-  padding: 0;
   background-color: #82b3d3;
+  display: flex;
 }
 
-.advantages-title,
-.features-title {
+.advantages-title {
+  width: 175px;
+  margin: 0 auto;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -208,17 +291,22 @@ body {
   color: #000000;
 }
 
-.advantages-description,
-.features-description {
+.advantages-description {
+  margin: 0;
+  margin-top: auto;
   color: #333333;
 }
 
-.advantages-item-dark .advantages-title,
+.advantages-item-dark .advantages-title {
+  width: 175px;
+  color: #ffffff;
+}
+
 .advantages-item-dark .advantages-description {
   color: #ffffff;
 }
 
-.advantages-img {
+.advantages-image {
   display: block;
 }
 
@@ -232,6 +320,7 @@ body {
 
 .features-list {
   display: flex;
+  flex-wrap: wrap;
   text-align: center;
 }
 
@@ -246,19 +335,36 @@ body {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
+.features-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.features-description {
+  margin: 0;
+  color: #333333;
+}
+
 .find-hotel {
-  min-height: 406px;
+  min-height: 214px;
   margin: 0;
   padding: 96px 304px;
 }
 
 .find-hotel-title {
-  margin: 96px 0 20px;
+  margin: 0 0 20px;
 }
 
 .find-hotel-description {
   margin: 20px 0 54px;
 }
+
+/* FOOTER */
 
 .footer-mailer{
   padding: 96px 258px 104px;
@@ -273,12 +379,29 @@ body {
   background-color: #ffffff;
 }
 
+.footer-mailer-title {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.footer-mailer-description {
+  margin: 0;
+  margin-bottom: 54px;
+}
+
+.mailer-form {
+  display: flex;
+}
+
 .field {
+  flex-grow: 1;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
   color: #000000;
+  border: none;
+  border-radius: 4px 0 0 4px;
 }
 
 .footer-contacts {
@@ -287,14 +410,28 @@ body {
   min-height: 120px;
   margin: 0 auto;
   padding: 40px 70px 30px;
-  justify-content: space-between;
+}
+
+.footer-contacts-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 142px;
+  min-height: 40px;
+  margin: 5px auto 5px 0;
 }
 
 .footer-contacts-social-item {
-  display: inline;
+  display: block;
+  min-height: 40px;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-contacts-phone {
+  min-width: 720px;
+  min-height: 50px;
+  margin: 0;
+  padding: 0;
   font-style: normal;
   font-size: 40px;
   line-height: 40px;
@@ -302,8 +439,33 @@ body {
 }
 
 .footer-contacts-phone-link {
+  display: block;
+  margin: 0;
+  padding: 5px 194px;
   text-decoration: none;
   color: #000000;
+}
+
+.footer-contacts-logo-link {
+  min-width: 115px;
+  min-height: 33px;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+}
+
+.footer-contacts-logo-image {
+  display: block;
+  margin: 8px 0 8px 41px;
+}
+
+/* CATALOG */
+
+.main-header-logo-link {
+  margin: 0;
+  width: 140px;
+  height: 70px;
+  display: block;
 }
 
 .main-inner {
@@ -312,6 +474,7 @@ body {
 }
 
 .filters {
+  margin: 0;
   padding: 70px;
   padding-top: 35px;
   background-image: url("../images/filter.jpg");
@@ -320,6 +483,11 @@ body {
 }
 
 .inner-header-title {
+  display: block;
+  margin: 0;
+  margin-bottom: 8px;
+  min-width: 495px;
+  min-height: 78px;
   font-size: 60px;
   font-weight: 700;
   line-height: 78px;
@@ -328,6 +496,9 @@ body {
 }
 
 .breadcrumbs {
+  display: flex;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
   font-size: 16px;
   line-height: 21px;
   text-align: left;
@@ -371,6 +542,7 @@ body {
 .filter-buttons {
   display: flex;
   flex-direction: column;
+  justify-content: end;
 }
 
 .hotel-result {
@@ -378,7 +550,16 @@ body {
   background-color: #ffffff;
 }
 
+.container-result {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  min-height: 49px;
+}
+
 .sorting-result {
+  margin: 0;
+  padding: 6px 0;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -387,6 +568,11 @@ body {
 }
 
 .select-control {
+  min-width: 292px;
+  min-height: 49px;
+  margin-left: auto;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
   font-family: inherit;
 }
 
@@ -415,11 +601,24 @@ body {
   text-align: left;
 }
 
+.product-card-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.product-card-row:last-child {
+  margin-bottom: 0;
+}
+
 .product-price {
   text-align: right;
 }
 
 .hotel-rating {
+  min-width: 140px;
+  padding: 9px 20px;
+  border-radius: 4px;
   line-height: 20px;
   text-transform: uppercase;
   background-color: #f2f2f2;
@@ -428,9 +627,14 @@ body {
 .pagination {
   display: flex;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .pagination-link {
+  min-width: 60px;
+  padding: 12px;
+  display: block;
+  border-radius: 4px;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
@@ -443,6 +647,11 @@ body {
 .pagination-current {
   color: #000000;
   background-color: #f2f2f2;
+}
+
+.pagination-dots {
+  background-color: transparent;
+  color: #000000;
 }
 
 .footer-mailer-inner {
