@@ -406,9 +406,8 @@ body {
 
 .footer-contacts {
   display: flex;
-  width: 1200px;
-  min-height: 120px;
-  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
   padding: 40px 70px 30px;
 }
 
@@ -447,16 +446,15 @@ body {
 }
 
 .footer-contacts-logo-link {
+  display: flex;
   min-width: 115px;
   min-height: 33px;
   margin: 0;
-  padding: 0;
-  margin-left: auto;
+  padding: 8px 0 8px 41px;
 }
 
 .footer-contacts-logo-image {
   display: block;
-  margin: 8px 0 8px 41px;
 }
 
 /* CATALOG */
@@ -598,7 +596,6 @@ body {
   grid-template-columns: repeat(2, 1fr);
   column-gap: 20px;
   row-gap: 16px;
-  width: 340px;
   padding: 20px;
   outline: 1px solid #e6e6e6;
   border-radius: 4px;
@@ -628,16 +625,6 @@ body {
   line-height: 28px;
   text-align: left;
 }
-
-/* .product-card-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 16px;
-}
-
-.product-card-row:last-child {
-  margin-bottom: 0;
-} */
 
 .product-price {
   text-align: right;
