@@ -56,8 +56,7 @@ body {
 }
 
 .button {
-  border: none;
-  border-radius: 4px;
+  display: inline-block;
   font-family: inherit;
   font-size: 16px;
   font-weight: 700;
@@ -65,8 +64,11 @@ body {
   text-align: center;
   color: #ffffff;
   background-color: #756157;
+  border: none;
+  border-radius: 4px;
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .button-want-here {
@@ -92,11 +94,10 @@ body {
 }
 
 .button-social {
+  position: relative;
   width: 47px;
   height: 40px;
   display: block;
-  outline: 1px solid #82b3d3;
-  color: #82b3d3;
   background-color: transparent;
 }
 
@@ -229,6 +230,29 @@ body {
   flex-grow: 1;
   background-color: #ffffff;
 }
+
+.hero {
+  position: relative;
+  background-color: #82b3d3;
+  color: #ffffff;
+}
+
+.main-banner {
+  display: block;
+  padding: 0;
+}
+
+.main-index-image {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding: 0;
+}
+
 
 .block-title  {
   font-size: 30px;
@@ -426,6 +450,16 @@ body {
   padding: 0;
 }
 
+.footer-social-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #83B3D3;
+}
+
 .footer-contacts-phone {
   min-width: 720px;
   min-height: 50px;
@@ -450,11 +484,12 @@ body {
   min-width: 115px;
   min-height: 33px;
   margin: 0;
-  padding: 8px 0 8px 41px;
+  /* padding: 8px 0 8px 41px; */
 }
 
 .footer-contacts-logo-image {
   display: block;
+  margin: 8px 0 8px 41px;
 }
 
 /* CATALOG */
