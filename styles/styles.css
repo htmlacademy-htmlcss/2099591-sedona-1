@@ -355,6 +355,27 @@ body {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
+.features-item-house {
+  background-image: url("../images/icons/house.svg");
+  background-repeat: no-repeat;
+  background-size: 75px 72px;
+  background-position: center 81px;
+}
+
+.features-item-food {
+  background-image: url("../images/icons/food.svg");
+  background-repeat: no-repeat;
+  background-size: 75px 72px;
+  background-position: center 81px;
+}
+
+.features-item-present {
+  background-image: url("../images/icons/present.svg");
+  background-repeat: no-repeat;
+  background-size: 75px 72px;
+  background-position: center 81px;
+}
+
 .features-item-light {
   background-color: rgba(131, 179, 211, 0.12);
 }
@@ -366,11 +387,14 @@ body {
   text-transform: uppercase;
   color: #000000;
   margin: 0;
+  margin-top: 102px;
   margin-bottom: 30px;
+  padding: 0;
 }
 
 .features-description {
   margin: 0;
+  padding: 0;
   color: #333333;
 }
 
