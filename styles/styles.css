@@ -71,6 +71,19 @@ body {
   cursor: pointer;
 }
 
+.button:hover {
+  background-color: #615048;
+}
+
+.button:focus {
+  background-color: #615048;
+  outline: none;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .button-want-here {
   margin: 0;
   margin-left: 20px;
@@ -95,12 +108,34 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
+.button-mailer:hover {
+  background-color: #68a2ca;
+}
+
+.button-mailer:focus {
+  background-color: #68a2ca;
+  outline: none;
+}
+
+.button-mailer:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .button-social {
   position: relative;
   width: 47px;
   height: 40px;
   display: block;
   background-color: transparent;
+}
+
+.button-social:hover {
+  background-color: transparent;
+}
+
+.button-social:focus {
+  background-color: transparent;
+  outline: none;
 }
 
 .button-apply {
@@ -110,9 +145,37 @@ body {
   background-color: #82b3d3;
 }
 
+.button-apply:hover {
+  background-color: #68a2ca;
+}
+
+.button-apply:focus {
+  background-color: #68a2ca;
+  outline: none;
+}
+
+.button-apply:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .button-opacity {
   min-width: 191px;
   padding: 8px 57px;
+  background-color: transparent;
+}
+
+.button-opacity:hover {
+  color: rgba(255, 255, 255, 1);
+  background-color: transparent;
+}
+
+.button-opacity:focus {
+  outline: 3px solid #82b3d3;
+  background-color: transparent;
+}
+
+.button-opacity:active {
+  color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
 }
 
@@ -124,6 +187,19 @@ body {
   background-color: #82b3d3;
 }
 
+.button-favourites:hover {
+  background-color: #68a2ca;
+}
+
+.button-favourites:focus {
+  background-color: #68a2ca;
+  outline: none;
+}
+
+.button-favourites:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .button-favourites-active {
   display: block;
   min-width: 140px;
@@ -132,23 +208,41 @@ body {
   background-color: #7db54f;
 }
 
-.button-list-form-select {
-  min-width: 48px;
-  padding: 16px;
-  margin-left: 70px;
-  display: block;
-  background-color: transparent;
-  border: 2px solid #000000;
+.button-favourites-active:hover {
+  background-color: #6c9e42;
+}
+
+.button-favourites-active:focus {
+  background-color: #6c9e42;
+  outline: none;
+}
+
+.button-favourites-active:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-list-form {
-  min-width: 48px;
-  padding: 16px;
-  margin-left: 8px;
   display: block;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 16px;
   background-color: transparent;
-  border: 2px solid #e5e5e5;
-  gap: 8px;
+  outline: 2px solid #e5e5e5;
+}
+
+.button-list-form:hover {
+  outline: 2px solid #000000;
+  background-color: transparent;
+}
+
+.button-list-form:focus {
+  outline: 2px solid #68a2ca;
+  background-color: transparent;
+}
+
+.button-list-form:active {
+  outline: 2px solid #000000;
+  background-color: transparent;
 }
 
 .button-view-grid {
@@ -254,6 +348,16 @@ body {
 }
 
 .favourite-count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: -10px;
+  margin-left: 15px;
+  min-width: 20px;
+  min-height: 20px;
+  padding: 4px;
+  border-radius: 10px;
   font-size: 10px;
   line-height: 10px;
   text-align: center;
@@ -270,26 +374,40 @@ body {
 
 .hero {
   position: relative;
+  padding: 51px 70px 82px;
   background-color: #82b3d3;
   color: #ffffff;
 }
 
-.main-banner {
-  display: block;
-  padding: 0;
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 57px;
+  background-image: url("../images/banner-bar.svg");
 }
 
-.main-index-image {
+.main-banner {
   display: block;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  margin: auto;
-  padding: 0;
+  object-fit: cover;
+  height: 100%;
 }
 
+.main-index-image {
+  display: block;
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  height: auto;
+  z-index: 2;
+}
 
 .block-title  {
   font-size: 30px;
@@ -353,7 +471,7 @@ body {
   color: #000000;
 }
 
-.advantages-item-dark .advantages-title::before {
+.advantages-item-dark .advantages-title::after {
   position: absolute;
   bottom: -32px;
   left: 50%;
@@ -361,11 +479,10 @@ body {
   height: 2px;
   margin-left: -30px;
   background-color: rgba(255, 255, 255, 0.3);
-  ;
   content: "";
 }
 
-.advantages-title::before {
+.advantages-title::after {
   position: absolute;
   bottom: -32px;
   left: 50%;
@@ -568,22 +685,49 @@ body {
 
 .footer-contacts-phone-link {
   display: block;
+  min-width: 331px;
+  min-height: 50px;
   margin: 0;
   padding: 5px 194px;
   text-decoration: none;
   color: #000000;
 }
 
-.footer-contacts-logo-link {
-  display: flex;
-  min-width: 115px;
-  min-height: 33px;
-  margin: 0;
+.footer-contacts-phone-link:hover,
+.footer-contacts-phone-link:focus {
+  color: #756157;
 }
 
-.footer-contacts-logo-image {
+.footer-contacts-phone-link:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.footer-contacts-logo-link {
   display: block;
-  margin: 8px 0 8px 41px;
+  position: relative;
+  min-width: 115px;
+  min-height: 50px;
+  margin: 0;
+  margin-left: auto;
+}
+
+.footer-contacts-logo-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+}
+
+.footer-contacts-logo-icon:hover,
+.footer-contacts-logo-icon:focus {
+  fill: #756157;
+}
+
+.footer-contacts-logo-icon:active {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 /* CATALOG */
@@ -743,6 +887,14 @@ body {
   font-family: inherit;
 }
 
+.view-buttons {
+  display: flex;
+  min-width: 160px;
+  min-height: 49px;
+  margin-left: 70px;
+  gap: 8px;
+}
+
 .product-list {
   display: grid;
   grid-template-columns: repeat(3, 340px);
@@ -817,6 +969,16 @@ body {
   text-decoration: none;
   color: #ffffff;
   background-color: #82b3d3;
+}
+
+.pagination-link:hover:not(.pagination-current, .pagination-dots),
+.pagination-link:focus:not(.pagination-current, .pagination-dots) {
+  background-color: #68a2ca;
+  outline: 1px solid #82b3d3;
+}
+
+.pagination-link:active:not(.pagination-current, .pagination-dots) {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .pagination-current {
