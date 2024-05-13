@@ -284,6 +284,9 @@ body {
 
 .main-header-logo {
   display: block;
+  position: relative;
+  margin-bottom: -6px;
+  z-index: 2;
 }
 
 .list {
@@ -308,6 +311,10 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+
+/* .navigation-item:hover {
+  border-bottom: 2px solid #756257;
+} */
 
 .navigation-link {
   display: block;
@@ -735,7 +742,6 @@ body {
 .main-header-logo-link {
   margin: 0;
   width: 140px;
-  height: 70px;
   display: block;
 }
 
