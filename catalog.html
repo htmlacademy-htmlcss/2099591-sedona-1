@@ -67,14 +67,17 @@
                 <ul class="list catalog-filter-list">
                   <li class="catalog-filter-item">
                     <input class="visually-hidden" id="pool" type="checkbox" name="infrastructure" value="pool" checked>
+                    <span class="control-mark"></span>
                     <label class="comfort" for="pool">Бассейн</label>
                   </li>
                   <li class="catalog-filter-item">
                     <input class="visually-hidden" id="parking" type="checkbox" name="infrastructure" value="parking" checked>
+                    <span class="control-mark"></span>
                     <label class="comfort" for="parking">Парковка</label>
                   </li>
                   <li class="catalog-filter-item">
                     <input class="visually-hidden" id="wi-fi" type="checkbox" name="infrastructure" value="wi-fi">
+                    <span class="control-mark"></span>
                     <label class="comfort" for="wi-fi">Wi-Fi</label>
                   </li>
                 </ul>
@@ -84,34 +87,43 @@
                 <ul class="list catalog-filter-list">
                   <li class="catalog-filter-item">
                     <input class="visually-hidden" id="hotel" type="radio" name="hotel-group" value="hotel" checked>
+                    <span class="control-mark-radio"></span>
                     <label class="comfort" for="hotel">Гостиница</label>
                   </li>
                   <li class="catalog-filter-item">
                     <input class="visually-hidden" id="motel" type="radio" name="hotel-group" value="motel">
+                    <span class="control-mark-radio"></span>
                     <label class="comfort" for="motel">Мотель</label>
                   </li>
                   <li class="catalog-filter-item">
                     <input class="visually-hidden" id="apartament" type="radio" name="hotel-group" value="apartament">
+                    <span class="control-mark-radio"></span>
                     <label class="comfort" for="apartament">Апартаменты</label>
                   </li>
                 </ul>
               </fieldset>
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                <div class="price-input-row">
-                  <label class="price">
-                    <input class="price-input input-min-price" type="number" name="min-price" placeholder="от" value="0">
-                  </label>
-                  <label class="price">
-                    <input class="price-input input-max-price" type="number" name="max-price" placeholder="до" value="9000">
-                  </label>
+                <div class="range">
+                  <div class="price-input-row">
+                    <label class="price">
+                      <input class="price-input input-min-price" type="number" name="min-price" placeholder="от" value="0">
+                    </label>
+                    <label class="price">
+                      <input class="price-input input-max-price" type="number" name="max-price" placeholder="до" value="9000">
+                    </label>
+                  </div>
+                  <div class="range-scale">
+                    <div class="range-bar" style="left: 0; width: 226px;">
+                      <button class="range-toggle toggle-min" type="button">
+                        <span class="visually-hidden">Изменить мин цену.</span>
+                      </button>
+                      <button class="range-toggle toggle-max" type="button">
+                        <span class="visually-hidden">Изменить макс цену.</span>
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                  <button class="toggle-min" type="button">
-                    <span class="visually-hidden">Изменить мин цену.</span>
-                  </button>
-                  <button class="toggle-max" type="button">
-                    <span class="visually-hidden">Изменить макс цену.</span>
-                  </button>
               </fieldset>
               <div class="filter-buttons">
                 <button class="button button-apply" type="submit">Применить</button>
