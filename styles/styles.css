@@ -886,31 +886,111 @@ body {
 }
 
 .field-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-form .field-group {
   margin: 0;
   margin-bottom: 48px;
 }
 
 .search-form-label {
+  width: 137px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
   text-align: left;
 }
 
+.search-form .field {
+  height: 48px;
+}
+
 .search-form-field {
   width: 440px;
   padding: 12px 20px;
+  margin-left: auto;
   border-radius: 4px;
+  background-image: url("../images/icons/date.svg");
+  background-repeat: no-repeat;
+  background-position: center right 14px;
+}
+
+.search-form-field::-webkit-inner-spin-button,
+.search-form-field::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
 }
 
 .search-form-people {
   display: flex;
   justify-content: space-between;
+  height: 48px;
+  margin: 0;
+  margin-bottom: 48px;
 }
 
-.search-form-field-people {
+.search-form-people .search-form-label {
+  padding-right: 46px;
+}
+
+.search-form-people .field {
   width: 110px;
+  padding: 14px 10px;
   border-radius: 4px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+}
+
+input[id="adult"] {
+  margin-right: 87px;
+}
+
+.search-input-people::-webkit-outer-spin-button,
+.search-input-people::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.search-input-people {
+  position: relative;
+}
+
+.search-input-people::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 2px;
+  background-color: rgba(117, 97, 87, 0.3);
+}
+
+.modal-search-button {
+  width: 577px;
+  height: 60px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  background-color: #83b3d3;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.modal-search-button:hover {
+  background-color: #68a2ca;
+}
+
+.modal-search-button:focus {
+  background-color: #68a2ca;
+  outline: none;
+}
+
+.modal-search-button:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* CATALOG */
@@ -1307,12 +1387,12 @@ input[type="radio"]:checked + .filter-radio::after {
 
 .product-list::after {
   position: absolute;
+  content: "";
   left: 0;
   right: 0;
   bottom: -40px;
   height: 1px;
   background-color: #e6e6e6;
-  content: "";
 }
 
 .product-card {
