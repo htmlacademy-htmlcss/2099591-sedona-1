@@ -283,7 +283,7 @@ body {
   margin: 0;
 }
 
-.modal-close-button {
+.button-modal-close {
   position: absolute;
   top: 64px;
   right: 52px;
@@ -296,6 +296,19 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+}
+
+.button-modal-close:hover {
+  background-color: #e6e6e6;
+}
+
+.button-modal-close:focus {
+  background-color: #e6e6e6;
+  border: 3px solid #83b3d3;
+}
+
+.button-modal-close:active {
+  opacity: 30%;
 }
 
 /* MAIN-HEADER */
@@ -907,6 +920,7 @@ body {
 
 .search-form .field {
   height: 48px;
+  font-weight: 700;
 }
 
 .search-form-field {
@@ -916,24 +930,61 @@ body {
   border-radius: 4px;
   background-image: url("../images/icons/date.svg");
   background-repeat: no-repeat;
-  background-position: center right 14px;
+  background-position: center right 20px;
+  color: #000000;
 }
 
-.search-form-field::-webkit-inner-spin-button,
-.search-form-field::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
+/* .date-text-error {
+  padding: 0;
+  margin: 0;
+  color: #ff5757;
+} */
+
+.button-minus-plus {
+  width: 40px;
+  height: 48px;
+  padding: 14px 10px;
+  margin: 0;
+  border: none;
 }
 
-input[id="adult"] {
+.minus-plus-icon {
+  fill: rgba(117, 97, 87, 0.3)
+}
+
+.minus-plus-icon:hover {
+  fill: #000000;
+  cursor: pointer;
+}
+
+.minus-plus-icon:focus {
+  fill: #000000;
+  border-radius: 4px;
+  outline: none;
+  border: 3px solid #82b3d3;
+}
+
+.minus-plus-icon:active {
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+.button-minus {
+  border-radius: 4px 0 0 4px;
+}
+
+.button-plus {
+  border-radius: 0 4px 4px 0;
+}
+
+input[id="adult"] + .button-plus {
   margin-right: 87px;
 }
 
 .search-input-people {
-  padding: 0;
+  padding: 14px 10px;
   margin: 0;
-  width: 110px;
-  border-radius: 4px;
+  width: 31px;
+  border-radius: 0 0 0 0;
 }
 
 .search-input-people::-webkit-outer-spin-button,
@@ -959,7 +1010,7 @@ input[id="adult"] {
 .tooltip {
   position: absolute;
   margin-top: 2px;
-  margin-left: -30px;
+  margin-left: -26px;
   width: 26px;
   height: 26px;
   }
@@ -1272,6 +1323,10 @@ input[type="radio"]:checked + .filter-radio::after {
   background-color: #3f5e72;
 }
 
+.range .price {
+  position: relative;
+}
+
 .price-input-row {
   display: flex;
   justify-content: space-between;
@@ -1316,6 +1371,14 @@ input[type="radio"]:checked + .filter-radio::after {
 
 .input-max-price {
   border-radius: 0 4px 4px 0;
+}
+
+.range span {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  color: rgba(0, 0, 0, 0.3);
+  line-height: 24px;
 }
 
 .range-scale {
