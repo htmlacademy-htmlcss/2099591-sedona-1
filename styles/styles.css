@@ -471,6 +471,7 @@ body {
 .hero {
   position: relative;
   padding: 51px 70px 82px;
+  margin-bottom: 69px;
   background-color: #82b3d3;
   color: #ffffff;
 }
@@ -520,25 +521,18 @@ body {
 }
 
 .advantages-text-title {
-  margin: 69px 0 25px;
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .advantages-text-description {
-  margin: 25px 0 69px;
+  margin: 25px 0 90px;
 }
 
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-}
-
-.advantages-content {
-  width: 400px;
-  min-height: 385px;
-  padding: 102px 85px;
-  display: flex;
-  flex-direction: column;
 }
 
 .advantages-item {
@@ -554,6 +548,19 @@ body {
   background-color: #82b3d3;
   display: flex;
 }
+
+.advantages-content {
+  width: 400px;
+  min-height: 385px;
+  padding: 112px 85px;
+  display: flex;
+  flex-direction: column;
+}
+
+.advantages-content-dark {
+  padding: 102px 85px;
+}
+
 
 .advantages-title {
   display: block;
@@ -724,6 +731,7 @@ body {
   padding: 14px 20px;
   height: 52px;
   flex-grow: 1;
+  font-family: inherit;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -926,12 +934,13 @@ body {
 
 .search-form-field {
   width: 440px;
-  padding: 12px 20px;
+  padding: 12px 50px 12px 20px;
   margin-left: auto;
   border-radius: 4px;
   background-image: url("../images/icons/date.svg");
   background-repeat: no-repeat;
   background-position: center right 20px;
+  font-family: inherit;
   color: #000000;
 }
 
@@ -993,6 +1002,7 @@ input[id="adult"] + .button-plus {
   margin: 0;
   width: 31px;
   border-radius: 0 0 0 0;
+  font-family: inherit;
 }
 
 .search-input-people::-webkit-outer-spin-button,
@@ -1044,21 +1054,22 @@ input[id="adult"] + .button-plus {
 }
 
 .tooltip-text {
+  display: block;
+  width: 256px;
+  min-height: 143px;
+  position: absolute;
+  top: 100%;
+  margin-top: 16px;
+  right: 50%;
+  transform: translateX(50%);
+  padding: 18px 18px 18px 22px;
+  border-radius: 10px;
   background-color: #333333;
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   text-transform: none;
-  padding: 15px 18px 18px 22px;
-  border-radius: 10px;
-  display: block;
-  width: 256px;
-  position: absolute;
-  top: 100%;
-  margin-top: 16px;
-  right: 50%;
-  transform: translateX(50%);
   display: none;
 }
 
@@ -1085,9 +1096,11 @@ input[id="adult"] + .button-plus {
   height: 60px;
   padding-top: 18px;
   padding-bottom: 18px;
+  border-radius: 10px;
   background-color: #83b3d3;
   font-size: 20px;
   line-height: 24px;
+  text-align: center;
 }
 
 .modal-search-button:hover {
@@ -1201,7 +1214,13 @@ input[id="adult"] + .button-plus {
 
 .catalog-filter {
   display: flex;
-  justify-content: space-between;
+}
+
+.comfort-type-filter {
+  display: flex;
+  width: 371px;
+  gap: 70px;
+  margin-right: 140px;
 }
 
 .catalog-filter-group {
@@ -1316,7 +1335,7 @@ input[type="radio"]:focus + .filter-radio::before {
   box-shadow: 0 0 0 3px #83b3d3;
 }
 
-.filter-cradio:active::before {
+.filter-radio:active::before {
   opacity: 0.3;
 }
 
@@ -1329,6 +1348,12 @@ input[type="radio"]:checked + .filter-radio::after {
   height: 10px;
   border-radius: 50%;
   background-color: #3f5e72;
+}
+
+.price-group-filter {
+  display: flex;
+  width: 549px;
+  gap: 70px;
 }
 
 .range .price {
@@ -1348,6 +1373,7 @@ input[type="radio"]:checked + .filter-radio::after {
   padding: 12px 20px;
   background-color: #f2f2f2;
   border: none;
+  font-family: inherit;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
