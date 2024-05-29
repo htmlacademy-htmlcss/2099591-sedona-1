@@ -20,6 +20,7 @@ html {
 
 body {
   height: 100%;
+  min-width: 1200px;
   margin: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
@@ -91,14 +92,14 @@ body {
 
 .button-want-here {
   margin: 0;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   padding: 8px 34px;
 }
 
 .button-find-hotel {
   display: block;
   width: 376px;
-  height: 52px;
+  /* height: 52px; */
   padding: 8px 50px;
   margin: 0 auto;
   font-size: 20px;
@@ -146,7 +147,6 @@ body {
 .button-apply {
   min-width: 191px;
   padding: 8px 50px;
-  margin-bottom: 32px;
   background-color: #82b3d3;
 }
 
@@ -166,6 +166,7 @@ body {
 .button-opacity {
   min-width: 191px;
   padding: 8px 57px;
+  margin-top: 32px;
   background-color: transparent;
 }
 
@@ -396,6 +397,7 @@ body {
 .navigation-user {
   display: flex;
   flex-wrap: wrap;
+  max-width: 300px;
   margin: 0;
   margin-left: auto;
   flex-shrink: 0;
@@ -418,6 +420,10 @@ body {
 
 .navigation-search:active {
   fill: rgba(117, 97, 87, 0.3);
+}
+
+.navigation-item-favourite {
+  margin-right: 20px;
 }
 
 .navigation-favourite {
@@ -448,6 +454,7 @@ body {
   align-items: center;
   min-width: 20px;
   min-height: 20px;
+  max-height: 30px;
   padding: 4px;
   border-radius: 10px;
   font-size: 10px;
@@ -1223,10 +1230,12 @@ body {
 
 .catalog-filter {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .comfort-type-filter {
   display: flex;
+  flex-wrap: wrap;
   width: 371px;
   min-height: 157px;
   gap: 70px;
@@ -1366,6 +1375,7 @@ input[type="radio"]:checked + .filter-radio::after {
 
 .price-group-filter {
   display: flex;
+  flex-wrap: wrap;
   width: 549px;
   gap: 70px;
 }
@@ -1489,6 +1499,7 @@ input[type="radio"]:checked + .filter-radio::after {
 
 .container-result {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
@@ -1507,7 +1518,7 @@ input[type="radio"]:checked + .filter-radio::after {
 
 .select-control {
   min-width: 292px;
-  min-height: 49px;
+  height: 49px;
   margin-left: auto;
   appearance: none;
   padding: 12px 20px;
@@ -1538,7 +1549,8 @@ input[type="radio"]:checked + .filter-radio::after {
 
 .view-buttons {
   display: flex;
-  min-width: 160px;
+  flex-wrap: wrap;
+  max-width: 160px;
   min-height: 48px;
   margin-left: 70px;
   gap: 8px;
@@ -1625,7 +1637,7 @@ input[type="radio"]:checked + .filter-radio::after {
 .hotel-rating {
   min-width: 140px;
   min-height: 37px;
-  padding: 9px 22px;
+  padding: 9px 22px 8px 23px;
   border-radius: 4px;
   font-size: 16px;
   line-height: 20px;
