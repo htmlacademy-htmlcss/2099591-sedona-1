@@ -237,6 +237,7 @@ body {
   width: 48px;
   height: 48px;
   padding: 17px 16px;
+  border-radius: 4px;
   background-color: transparent;
   box-shadow: inset 0 0 0 2px #e5e5e5;
 }
@@ -381,6 +382,7 @@ body {
 
 .navigation-link-current {
   position: relative;
+  cursor: default;
   z-index: 2;
 }
 
@@ -453,8 +455,7 @@ body {
   justify-content: center;
   align-items: center;
   min-width: 20px;
-  min-height: 20px;
-  max-height: 30px;
+  height: 20px;
   padding: 4px;
   border-radius: 10px;
   font-size: 10px;
@@ -606,6 +607,7 @@ body {
 
 .advantages-description {
   display: block;
+  width: 235px;
   margin: 0;
   padding: 0;
   color: #333333;
@@ -657,6 +659,7 @@ body {
   background-repeat: no-repeat;
   background-size: 75px 72px;
   background-position: center 81px;
+  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .features-item-present {
@@ -664,10 +667,6 @@ body {
   background-repeat: no-repeat;
   background-size: 75px 72px;
   background-position: center 81px;
-}
-
-.features-item-light {
-  background-color: rgba(131, 179, 211, 0.12);
 }
 
 .features-title {
@@ -755,8 +754,12 @@ body {
   cursor: pointer;
 }
 
-.field:focus,
-.field:active {
+.field:focus {
+  box-shadow: 0 0 0 3px #82b3d3;
+  outline: none;
+}
+
+.field:not(:placeholder-shown) {
   background-color: #e6e6e6;
   outline: none;
   box-shadow: inset 0 0 0 2px #000000;
@@ -919,7 +922,6 @@ body {
   text-transform: uppercase;
 }
 
-
 .field-group {
   display: flex;
   flex-wrap: wrap;
@@ -1021,10 +1023,6 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
-.input-people-adult + .button-plus {
-  margin-right: 87px;
-}
-
 .search-input-people {
   padding: 14px 10px;
   margin: 0;
@@ -1035,7 +1033,8 @@ body {
 
 .search-input-people::-webkit-outer-spin-button,
 .search-input-people::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
@@ -1159,6 +1158,13 @@ body {
   margin: 0;
   width: 140px;
   display: block;
+}
+
+.main-header-logo-link:hover,
+.main-header-logo-link:focus,
+.main-header-logo-link:active {
+  opacity: 80%;
+  z-index: 1;
 }
 
 .main-inner {
@@ -1428,7 +1434,8 @@ input[type="radio"]:checked + .filter-radio::after {
 
 .price-input::-webkit-outer-spin-button,
 .price-input::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
 }
 
@@ -1548,7 +1555,8 @@ input[type="radio"]:checked + .filter-radio::after {
   width: 292px;
   height: 49px;
   margin-left: auto;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   padding: 12px 20px;
   padding-right: 40px;
   border: none;
