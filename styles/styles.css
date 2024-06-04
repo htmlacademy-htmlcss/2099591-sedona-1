@@ -482,6 +482,9 @@ body {
   position: relative;
   padding: 51px 70px 82px;
   margin-bottom: 69px;
+  background-image: url("../images/index-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #82b3d3;
   color: #ffffff;
 }
@@ -494,17 +497,6 @@ body {
   bottom: 0;
   height: 57px;
   background-image: url("../images/banner-bar.svg");
-}
-
-.main-banner {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  object-fit: cover;
-  height: 100%;
 }
 
 .main-index-image {
@@ -1179,6 +1171,8 @@ body {
   background-image: url("../images/filter.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: #756157;
+  color: #ffffff;
 }
 
 .inner-header-title {
@@ -1439,6 +1433,10 @@ input[type="radio"]:checked + .filter-radio::after {
   margin: 0;
 }
 
+.price-input {
+  -moz-appearance: textfield;
+}
+
 .price-input:not(:disabled):hover {
   background-color: #e6e6e6;
   cursor: pointer;
@@ -1565,6 +1563,7 @@ input[type="radio"]:checked + .filter-radio::after {
   background-image: url("../images/icons/arrow-down.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
+  background-color: transparent;
   font-family: inherit;
   font-size: inherit;
 }
@@ -1618,6 +1617,7 @@ input[type="radio"]:checked + .filter-radio::after {
   padding: 20px;
   outline: 1px solid #e6e6e6;
   border-radius: 4px;
+  align-content: flex-start;
 }
 
 .product-card-link {
